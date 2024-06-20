@@ -52,7 +52,7 @@ body{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 0 50px;
+    padding: 0 15px;
     gap: 20px;
 }
 .top span{
@@ -61,14 +61,18 @@ body{
     font-size: 78%;
 }
 
-.top p{
+.top #advice{
+    width: 90%;
+    height: 100px;
+    display: flex;
     text-align: center;
-    font-size: 29px;
+    justify-content: center;
+    font-size: 25px;
     color: white;
 }
 
 .bottom{
-    margin: 20px 0 0 0;
+    margin: 30px 0 0 0;
 }
 
 .bottom #divDesk{
@@ -108,6 +112,44 @@ body{
     opacity: .8;
 }
 
+#skeleton{
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+#skeleton .skeleton__text{
+    width: 400px;
+    height: 20px;
+    background: rgb(78, 85, 92);
+    border-radius: 10px;
+    display: flex;
+    margin-top: .5rem; 
+    animation: skeleton 5s infinite;
+}
+
+@keyframes skeleton{
+    0%{
+        opacity: 1;
+    }
+    25%{
+        opacity: .5;
+    }
+    50%{
+        opacity: 1;
+    }
+    75%{
+        opacity: .5;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+
 /* *********** Media Queries *********/
 @media screen and (max-width: 450px) {
     .advice-box{
@@ -123,6 +165,10 @@ body{
     }
     .bottom #divMob{
         display: block;
+    }
+
+    #skeleton .skeleton__text{
+        width: 200px;
     }
 
 }
